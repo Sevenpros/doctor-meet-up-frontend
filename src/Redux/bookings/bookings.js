@@ -1,50 +1,23 @@
-import React from "react";
-import createAsyncThunk from "@reduxjs/toolkit";
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
-const ADD_BOOKING = "bookings/addBooking";
-const REMOVE_BOOKING = "bookings/removeBooking";
-const FETCH_BOOKINGS = "bookings/fetchBookings";
+const FETCH_BOOKINGS = 'FETCH_BOOKINGS';
 
-const fetch_API = 'http://localhost:3000/users/:id/bookings';
+const fetchAPI = 'http://localhost:3001/users/4/bookings';
 
-export const fetchBookings = createAsyncThunk(
-    FETCH_BOOKINGS,
-    async () => {
-        const response = await fetch(fetch_API);
-        const data = await response.json();
-        console.log(data);
-        return data;
-    }
-);
+export const fetchBookings = createAsyncThunk(FETCH_BOOKINGS, async () => {
+  const Response = await fetch(fetchAPI);
+  const result = await Response.json();
+  return result;
+});
 
-const initialState = {
-    bookings: [],
-    status: "idle",
-};
+const initialState = [];
 
 const bookingsReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case ADD_BOOKING:
-            return {
-                ...state,
-                bookings: [...state.bookings, action.payload],
-            };
-        case REMOVE_BOOKING:
-            return {
-                ...state,
-                bookings: state.bookings.filter(
-                    (booking) => booking.id !== action.payload
-                ),
-            };
-        case FETCH_BOOKINGS:
-            return {
-                ...state,
-                bookings: action.payload,
-            };
-        default:
-            return state;
-    }
+  switch (action.type) {
+    case `${FETCH_BOOKINGS}/fulfilled`:
+      return [...action.payload];
+    default: return state;
+  }
 };
 
 export default bookingsReducer;
-
