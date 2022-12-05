@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchBookings } from '../../Redux/bookings/bookings';
-// import { fetchDoctors } from "../../Redux/doctors/doctors";
+//import { fetchDoctors } from "../../Redux/doctors/doctors";
 
 const Bookings = () => {
   const dispatch = useDispatch();
@@ -28,9 +28,10 @@ const Bookings = () => {
                 )
             )}
             */}
-          <h4>{booking.city}</h4>
-          <p>{booking.date}</p>
-          <p>{booking.time}</p>
+          <h4>City: {booking.city}</h4>
+          <p>Date: {booking.date}</p>
+          <p>Time: {booking.time}</p>
+          <p>Disease description: {booking.disease_desc}</p>
           <button
             className="btn btn-danger"
             onClick={(e) => {
@@ -62,4 +63,5 @@ const Bookings = () => {
     </div>
   );
 };
+
 export default Bookings;
