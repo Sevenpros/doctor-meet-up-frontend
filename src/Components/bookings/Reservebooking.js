@@ -1,13 +1,12 @@
 /* eslint-disable */
 
 import React, { useState, useEffect } from 'react';
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchDoctors } from '../../Redux/doctors/doctors';
-
-const ReserveDoctor = () => {
+//import { fetchDoctors } from '../../';
+const Reservations = () => {
   const dispatch = useDispatch();
-  const doctors = useSelector((state) => state.doctors.doctors);
+  //const doctors = useSelector((state) => state.doctors.doctors);
   useEffect(() => {
     dispatch(fetchDoctors());
   }, [dispatch]);
@@ -111,4 +110,4 @@ const ReserveDoctor = () => {
   );
 };
 
-export default ReserveDoctor;
+export default Reservations;

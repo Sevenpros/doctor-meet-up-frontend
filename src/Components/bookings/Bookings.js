@@ -3,8 +3,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchBookings } from '../../Redux/bookings/bookings';
-//import { fetchDoctors } from "../../Redux/doctors/doctors";
-
+import SideNav from '../sideNav';
 const Bookings = () => {
   const dispatch = useDispatch();
   const bookings = useSelector((state) => state.bookingsReducer);
@@ -24,10 +23,13 @@ const Bookings = () => {
             {doctors.map(
               (doctor) =>
                 doctor.id === booking.doctor_id && (
-                  <h3>Doctor: {doctor.name}</h3>
-                )
+                   )
             )}
             */}
+            <strong>Doctor Name</strong>
+            <h3>first_name : {booking.doctor.first_name}</h3>
+            <h3>last_name: {booking.doctor.last_name}</h3>
+               
           <h4>City: {booking.city}</h4>
           <p>Date: {booking.date}</p>
           <p>Time: {booking.time}</p>
@@ -58,8 +60,10 @@ const Bookings = () => {
 
   return (
     <div>
+      <SideNav />
       <h1>BOOKINGS LIST</h1>
       {displayBookings }
+      
     </div>
   );
 };
