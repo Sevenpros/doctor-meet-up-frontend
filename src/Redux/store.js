@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
-import logger from 'redux-logger';
+ import logger from 'redux-logger';
+import doctorsReducer from './doctors/doctors';
 import bookingsReducer from './bookings/bookings';
-// import greetingReducer from './greeting';
 
 const store = configureStore({
   reducer: {
-    // greetingReducer,
-    bookingsReducer,
+    doctors: doctorsReducer,
+    bookings: bookingsReducer
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 export default store;
