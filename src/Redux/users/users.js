@@ -12,14 +12,17 @@ const initialState = {
 const usersReducer = (state = initialState, action) => {
   switch (action.type) {
     case `${FETCH_USERS}/fulfilled`:
-      return {...state, users: action.payload};
+      return { ...state, users: action.payload };
+
     case `${ADD_USER}/fulfilled`:
-      return {...state, current_user: action.payload};
+      return { ...state, current_user: action.payload };
+
     case CURRENT_USER: {
-        const current_user = state.users.find((user) => (user.name === action.name));
-      return { ...state, current_user }; }
-      default: return state;
-    }
+      const user = state.users.find((user) => (user.name === action.name));
+      return { ...state, current_user: user }; }
+
+    default: return state;
+  }
 };
 
 export const fetchUsers = createAsyncThunk(FETCH_USERS, async () => {
@@ -28,26 +31,16 @@ export const fetchUsers = createAsyncThunk(FETCH_USERS, async () => {
   return response;
 });
 
-// export const saveUser = async name => {
-// const response = await fetch("",{
-//     method: 'POST',
-//     body: JSON.stringify({name:name}),
-//     headers: {
-//         'Content-Type': 'application/json'
-//     },
-// });
-// return response
-// }
 export const addUser = createAsyncThunk(ADD_USER, async (name) => {
-    const response = await fetch('http://localhost:3001/users', {
-        method: 'POST',
-        body: JSON.stringify({name: name}),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      return response.json();
- });
+  const response = await fetch('http://localhost:3001/users', {
+    method: 'POST',
+    body: JSON.stringify({ name }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  return response.json();
+});
 
-export const loadCurrentUser = (name) => ({type: CURRENT_USER, name});
+export const loadCurrentUser = (name) => ({ type: CURRENT_USER, name });
 export default usersReducer;
