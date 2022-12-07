@@ -1,16 +1,17 @@
 import React from 'react';
-import {
-  Routes,
-  Route,
-} from 'react-router';
-import Bookings from '../Components/Bookings';
+import { Routes, Route } from 'react-router';
+
+import Bookings from '../Components/bookings/Bookings';
 import Doctors from '../Components/Doctors';
+import SideNav from '../Components/sideNav';
 
 function Router() {
   return (
     <Routes>
       <Route path="/" element={<Doctors />} />
       <Route path="/bookings" element={<Bookings />} />
+      <Route path="/sideNav" element={<SideNav />} />
+
     </Routes>
   );
 }
