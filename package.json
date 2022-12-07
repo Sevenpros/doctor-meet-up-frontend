@@ -16,10 +16,7 @@
     "react-router": "^6.4.4",
     "react-router-dom": "^6.4.4",
     "react-scripts": "5.0.1",
-<<<<<<< HEAD
-=======
     "react-toastify": "^9.1.1",
->>>>>>> develop
     "redux-logger": "^3.0.6",
     "web-vitals": "^2.1.4"
   },

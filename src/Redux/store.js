@@ -8,7 +8,7 @@ const store = configureStore({
   reducer: {
     doctors: doctorsReducer,
     bookings: bookingsReducer,
-    users: usersReducer
+    users: usersReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
