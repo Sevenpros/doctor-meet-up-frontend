@@ -1,11 +1,10 @@
 import React from 'react';
-import {
-  Routes,
-  Route,
-} from 'react-router';
-import Bookings from '../Components/Bookings';
+import { Routes, Route } from 'react-router';
+
+import Bookings from '../Components/bookings/Bookings';
 import Doctors from '../Components/Doctors';
 import Login from '../Components/Login';
+import SideNav from '../Components/sideNav';
 
 function Router() {
   return (
@@ -14,6 +13,7 @@ function Router() {
       <Route path="/doctors" element={<Doctors />} />
       <Route path="/login" element={<Login />} />
       <Route path="/bookings" element={<Bookings />} />
+      <Route path="/sideNav" element={<SideNav />} />
 
     </Routes>
   );
