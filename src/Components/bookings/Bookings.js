@@ -6,7 +6,7 @@ import { fetchBookings } from '../../Redux/bookings/bookings';
 import SideNav from '../sideNav';
 const Bookings = () => {
   const dispatch = useDispatch();
-  const bookings = useSelector((state) => state.bookingsReducer);
+  const bookings = useSelector((state) => state.bookings);
   console.log(bookings);
   // const doctors = useSelector((state) => state.doctors.doctors);
   // const status = useSelector((state) => state.bookings.status);
