@@ -9,7 +9,7 @@ import SideNav from '../Components/sideNav';
 function Router() {
   return (
     <Routes>
-      <Route path="/" element={<Doctors />} />
+      <Route path="/" element={<Login />} />
       <Route path="/doctors" element={<Doctors />} />
       <Route path="/login" element={<Login />} />
       <Route path="/bookings" element={<Bookings />} />

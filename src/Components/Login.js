@@ -24,7 +24,7 @@ const Login = () => {
     <div>
       <form>
         <input className="form-control" type="text" placeholder="Enter your full name" value={name} onChange={onChangeHandle} />
-        <input className="btn btn-primary" type="submit" onClick={onSubmitHandle} />
+        <input className="btn btn-primary" type="submit" onClick={onSubmitHandle} value="Login" />
       </form>
     </div>
   );
