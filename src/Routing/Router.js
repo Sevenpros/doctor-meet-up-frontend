@@ -3,8 +3,8 @@ import {
   Routes,
   Route,
 } from 'react-router';
-import Bookings from '../Components/Bookings';
-import Doctors from '../Components/Doctors';
+import Bookings from '../Components/bookings/Bookings';
+import Doctors from '../Components/doctor/Doctors';
 
 function Router() {
   return (
