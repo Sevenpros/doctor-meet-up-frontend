@@ -7,7 +7,6 @@ import { fetchBookings } from './Redux/bookings/bookings';
 import App from './Components/App';
 import store from './Redux/store';
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 store.dispatch(fetchBookings());
