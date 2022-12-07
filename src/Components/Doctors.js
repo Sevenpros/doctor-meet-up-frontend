@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Doctor from './Doctor';
 import { fetchDoctors } from '../Redux/doctors/doctors';
 import '../Styles/doctors.css';
 
@@ -20,14 +19,19 @@ const Doctors = () => {
       </div>
       <div className="doctors">
         {doctors.map((doctor) => (
-          <Doctor
-            key={doctor.id}
-            id={doctor.id}
-            firstName={doctor.first_name}
-            lastName={doctor.last_name}
-            photo={doctor.photo}
-            bio={doctor.bio}
-          />
+          <div key={doctor.id} className="doctor-container">
+            <div>
+              <img src={doctor.photo} alt="Doctor-Img" className="doctor-img" />
+            </div>
+            <div className="doctor-details">
+              <h2>
+                {doctor.first_name}
+                {' '}
+                {doctor.last_name}
+              </h2>
+              <p>{doctor.bio}</p>
+            </div>
+          </div>
         ))}
       </div>
     </div>
