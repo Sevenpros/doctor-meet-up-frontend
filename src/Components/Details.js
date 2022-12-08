@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchDoctor } from '../Redux/doctors/doctor';
@@ -15,6 +16,7 @@ const Details = () => {
     <div className="container d-flex justify-content-center align-items-center">
       <div>
         <img src={doctor.photo} alt="Doctor-Img" className="doctor-img" />
+        <Link to="/doctors">Back</Link>
       </div>
       <div className="container d-flex justify-content-center align-items-center">
         <table className="table">
