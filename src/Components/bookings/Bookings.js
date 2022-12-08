@@ -3,14 +3,16 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchBookings } from '../../Redux/bookings/bookings';
-import SideNav from '../sideNav';
+import { Navigate } from 'react-router-dom';
+
 const Bookings = () => {
   const dispatch = useDispatch();
   const bookings = useSelector((state) => state.bookings);
-  console.log(bookings);
-  // const doctors = useSelector((state) => state.doctors.doctors);
-  // const status = useSelector((state) => state.bookings.status);
-
+  const currentUser = useSelector((state) => state.users.current_user);
+if(!currentUser.name){
+    return < Navigate to= "/login" />
+}
+else {
   useEffect(() => {
     dispatch(fetchBookings());
     // dispatch(fetchDoctors());
@@ -60,12 +62,11 @@ const Bookings = () => {
 
   return (
     <div>
-      <SideNav />
       <h1>BOOKINGS LIST</h1>
       {displayBookings }
       
     </div>
-  );
+  );}
 };
 
 export default Bookings;
