@@ -1,25 +1,24 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-const FETCH_DOCTORS = 'doctor-meet-up-frontend/doctors/FETCH_DOCTORS';
+const FETCH_DOCTOR = 'doctor-meet-up-frontend/doctors/FETCH_DOCTOR';
 const initialState = [];
 
-const doctorsReducer = (state = initialState, action) => {
+const doctorReducer = (state = initialState, action) => {
   switch (action.type) {
-    case `${FETCH_DOCTORS}/fulfilled`:
+    case `${FETCH_DOCTOR}/fulfilled`:
       return action.payload;
     default:
       return state;
   }
 };
 
-export const fetchDoctors = createAsyncThunk(FETCH_DOCTORS, async () => {
-  const data = await fetch('http://localhost:3001/doctors');
+export const fetchDoctor = createAsyncThunk(FETCH_DOCTOR, async (id) => {
+  const data = await fetch(`http://localhost:3001/doctors/${id}`);
   const response = await data.json();
   return response;
 });
-
 // export const fetchDoctors = () => (dispatch) => fetch('http://localhost:3000/doctors')
 //   .then((res) => res.json())
 //   .then((data) => dispatch(getDoctors(data)));
 
-export default doctorsReducer;
+export default doctorReducer;
