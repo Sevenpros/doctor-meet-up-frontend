@@ -17,8 +17,5 @@ export const fetchDoctor = createAsyncThunk(FETCH_DOCTOR, async (id) => {
   const response = await data.json();
   return response;
 });
-// export const fetchDoctors = () => (dispatch) => fetch('http://localhost:3000/doctors')
-// .then((res) => res.json())
-// .then((data) => dispatch(getDoctors(data)));
 
 export default doctorReducer;
