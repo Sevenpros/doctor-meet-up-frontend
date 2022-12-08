@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router';
-
+import Details from '../Components/Details';
 import Bookings from '../Components/bookings/Bookings';
 import Doctors from '../Components/Doctors';
 import Login from '../Components/Login';
@@ -18,6 +18,8 @@ function Router() {
       <Route element={<WithNav />}>
         <Route path="/doctors" element={<Doctors />} />
         <Route path="/bookings" element={<Bookings />} />
+        <Route path="/details/:id" element={<Details />} />
+
       </Route>
     </Routes>
   );

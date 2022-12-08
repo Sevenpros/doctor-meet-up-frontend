@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchDoctors } from '../Redux/doctors/doctors';
 import '../Styles/doctors.css';
@@ -31,6 +32,7 @@ const Doctors = () => {
               </h2>
               <p>{doctor.bio}</p>
             </div>
+            <Link to={`/Details/${doctor.id}`}>See</Link>
           </div>
         ))}
       </div>
