@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -7,7 +6,6 @@ import { fetchBookings } from '../Redux/bookings/bookings';
 
 import AddDoctor from './Add_doctors';
 import DeleteDoctor from './Delete_doctors';
-import Reservations from './bookings/Reservebooking';
 import Footer from './Footer';
 import '../Styles/nav.css';
 
