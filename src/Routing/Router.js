@@ -7,6 +7,7 @@ import Login from '../Components/Login';
 import WithoutNav from '../Components/WithoutNav';
 import WithNav from '../Components/WithNav';
 import ADDBookings from '../Components/bookings/addBooking';
+import AddDoctor from '../Components/Add_doctors';
 
 function Router() {
   return (
@@ -18,6 +19,7 @@ function Router() {
       </Route>
       <Route element={<WithNav />}>
         <Route path="/doctors" element={<Doctors />} />
+        <Route path="/Add_doctors" element={<AddDoctor />} />
         <Route path="/bookings" element={<Bookings />} />
         <Route path="/details/:id" element={<Details />} />
         <Route path="/bookings/new" element={<ADDBookings />} />
