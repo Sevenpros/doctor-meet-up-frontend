@@ -4,14 +4,56 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+}
+
+.header h1 {
+  font-weight: 800;
 }
 
 .doctors {
   display: flex;
 }
 
-.doctor-img {
-  width: 250px;
+.img-div {
   border-radius: 50%;
+  background-color: #dfdfe9;
+  margin: 50px 75px;
+}
+
+.doctor-img {
+  width: 200px;
+  height: 165px;
+}
+
+.doctor-details h2 {
+  font-size: large;
+}
+
+.line {
+  width: 50%;
+  margin: 10px auto;
+  border-top: 1px dashed #efefef;
+}
+
+.bio {
+  color: #b8b8b8;
+}
+
+.rec.rec-arrow {
+  background-color: #98bf11;
+  color: white;
+  width: 80px;
+  height: 66px;
+}
+
+.rec.rec-arrow-left {
+  border-radius: 0 50% 50% 0;
+}
+
+.rec.rec-arrow-right {
+  border-radius: 50% 0 0 50%;
+}
+
+.rec.rec-dot {
+  display: none;
 }

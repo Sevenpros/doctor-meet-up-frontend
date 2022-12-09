@@ -3,7 +3,7 @@ import Router from '../Routing/Router';
 import '../Styles/App.css';
 
 const App = () => (
-  <div className="container main">
+  <div className="main">
     <Router />
   </div>
 );

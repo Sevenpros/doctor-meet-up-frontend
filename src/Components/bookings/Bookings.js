@@ -62,7 +62,7 @@ else {
   );
 
   return (
-    <div>
+    <div className="container">
       <h1>BOOKINGS LIST</h1>
       {displayBookings }
       
