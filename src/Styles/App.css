@@ -4,9 +4,6 @@ body {
 }
 
 .main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
 }
 
@@ -27,11 +24,6 @@ body {
   width: 60%;
 }
 
-.side-nav {
-  width: 40%;
-}
-
 .component-layout {
   display: flex;
-  justify-content: space-between;
 }

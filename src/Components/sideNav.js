@@ -35,7 +35,7 @@ const SideNav = () => {
           </NavLink>
         </li>
         <li className="side-nav-div">
-          <NavLink to="/AddBookings" className="side-nav-link">
+          <NavLink to="/bookings/new" className="side-nav-link">
             Reserve a Doctor
           </NavLink>
         </li>
@@ -52,7 +52,6 @@ const SideNav = () => {
         { Footer }
         {AddDoctor}
         {DeleteDoctor}
-        {Reservations}
       </ul>
     </nav>
   );
