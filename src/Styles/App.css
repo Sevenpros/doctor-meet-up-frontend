@@ -2,3 +2,27 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.main {
+  padding: 36px 0;
+
+}
+
+.login-form {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.booking-form {
+  width: 60%;
+}
+
+.side-nav {
+  width: 40%;
+}
+.component-layout {
+  display: flex;
+  justify-content: space-between;
+}

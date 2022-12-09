@@ -13,8 +13,9 @@ if(!currentUser.name){
     return < Navigate to= "/login" />
 }
 else {
+  const user = useSelector((state) => state.users.current_user);
   useEffect(() => {
-    dispatch(fetchBookings());
+    dispatch(fetchBookings(user.id));
     // dispatch(fetchDoctors());
   }, [dispatch]);
   const displayBookings = bookings.length !== 0 ? (

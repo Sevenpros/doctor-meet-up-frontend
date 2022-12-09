@@ -7,7 +7,6 @@ import { fetchBookings } from '../Redux/bookings/bookings';
 
 import AddDoctor from './Add_doctors';
 import DeleteDoctor from './Delete_doctors';
-import Reservations from './bookings/Reservebooking';
 import Footer from './Footer';
 
 const SideNav = () => {
@@ -34,14 +33,10 @@ const SideNav = () => {
           </NavLink>
         </div>
         <div className="side-nav-div">
-          <NavLink to="/AddBookings" className="side-nav-link">
+          <NavLink to="/bookings/new" className="side-nav-link">
             Reserve a Doctor
           </NavLink>
         </div>
-
-      </div>
-
-      <div className="side-nav">
 
         <div className="side-nav-div">
           <NavLink to="/Add_doctors" className="side-nav-link">
@@ -57,7 +52,6 @@ const SideNav = () => {
         { Footer }
         {AddDoctor}
         {DeleteDoctor}
-        {Reservations}
 
       </div>
 

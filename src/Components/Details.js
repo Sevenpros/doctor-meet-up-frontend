@@ -43,6 +43,8 @@ const Details = () => {
 
             </tr>
           </tbody>
+          <button type="button" className="btn btn-primary mt-5">Reserve Doctor</button>
+
         </table>
       </div>
     </div>

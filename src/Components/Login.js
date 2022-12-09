@@ -21,10 +21,10 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <form>
+    <div className="login-form">
+      <form className="fom-control">
         <input className="form-control" type="text" placeholder="Enter your full name" value={name} onChange={onChangeHandle} />
-        <input className="btn btn-primary" type="submit" onClick={onSubmitHandle} value="Login" />
+        <input className="btn btn-primary mt-3" type="submit" onClick={onSubmitHandle} value="Login" />
       </form>
     </div>
   );
