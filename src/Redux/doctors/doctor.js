@@ -9,7 +9,7 @@ const doctorReducer = (state = initialState, action) => {
     case `${FETCH_DOCTOR}/fulfilled`:
       return action.payload;
     case `${ADD_DOCTOR}/fulfilled`:
-      return [...state];
+      return [...state, action.payload];
 
     default:
       return state;

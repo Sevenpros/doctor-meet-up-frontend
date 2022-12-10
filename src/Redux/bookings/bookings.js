@@ -30,4 +30,5 @@ export const addBooking = createAsyncThunk(ADD_BOOKING, async (booking) => {
   });
   return response.json();
 });
+
 export default bookingsReducer;
