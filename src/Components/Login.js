@@ -16,7 +16,9 @@ const Login = () => {
   const onSubmitHandle = (e) => {
     e.preventDefault();
     dispatch(loadCurrentUser(name));
-    if (!currentUser.name) dispatch(addUser(name));
+    if (!currentUser.name) {
+      dispatch(addUser(name));
+    }
     navigate('/doctors');
   };
 
