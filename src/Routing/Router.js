@@ -12,7 +12,6 @@ import AddDoctor from '../Components/Add_doctors';
 function Router() {
   return (
     <Routes>
-
       <Route element={<WithoutNav />}>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />

@@ -3,6 +3,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 
 import { addDoctor } from '../Redux/doctors/doctor';
 
@@ -20,6 +21,16 @@ const AddDoctor = () => {
     
     const onClickHandle = (e) => {
         e.preventDefault();
+        toast.success("You have succesfully booked this Doctor", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
         const doctor = {};
         doctor.first_name = first_name;
         doctor.last_name = last_name;
@@ -29,7 +40,6 @@ const AddDoctor = () => {
         doctor.bio = bio;
         doctor.specialization = specialization;
         doctor.photo = photo;
-        console.log(doctor);
         dispatch(addDoctor(doctor));
     };
     
@@ -110,10 +120,13 @@ const AddDoctor = () => {
                 </tr>
             </tbody>
             </table>
-            <button type="button" className="btn btn-primary" onClick={onClickHandle}>
+            <button type="button" className="btn btn-primary" onClick={onClickHandle}
+            >
             Add Doctor
             </button>
         </div>
+        
+        <ToastContainer />
         </div>
     );
 };
