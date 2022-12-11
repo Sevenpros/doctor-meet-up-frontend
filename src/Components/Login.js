@@ -8,18 +8,21 @@ const Login = () => {
 
   const onChangeHandle = (e) => (setName(e.target.value));
 
-  const currentUser = useSelector((state) => state.users.current_user);
+  const users = useSelector((state) => state.users.users);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const onSubmitHandle = (e) => {
     e.preventDefault();
-    dispatch(loadCurrentUser(name));
-    if (!currentUser.name) {
+    const user = users.find((user) => (user.name === name));
+    if (user) {
+      dispatch(loadCurrentUser(user));
+      navigate('/doctors');
+    } else {
       dispatch(addUser(name));
+      navigate('/doctors');
     }
-    navigate('/doctors');
   };
 
   return (
