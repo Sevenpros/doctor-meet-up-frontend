@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { loadCurrentUser, addUser } from '../Redux/users/users';
 
 const Login = () => {
@@ -15,6 +17,12 @@ const Login = () => {
 
   const onSubmitHandle = (e) => {
     e.preventDefault();
+    if (name === '') {
+      toast.error('Please Enter your name!', {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      return;
+    }
     const user = users.find((user) => (user.name === name));
     if (user) {
       dispatch(loadCurrentUser(user));
@@ -31,6 +39,7 @@ const Login = () => {
         <input className="form-control" type="text" placeholder="Enter your full name" value={name} onChange={onChangeHandle} />
         <input className="btn btn-primary mt-3" type="submit" onClick={onSubmitHandle} value="Login" />
       </form>
+      <ToastContainer />
     </div>
   );
 };
