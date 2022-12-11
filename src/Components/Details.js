@@ -43,7 +43,9 @@ const Details = () => {
 
             </tr>
           </tbody>
-          <button type="button" className="btn btn-primary mt-5">Reserve Doctor</button>
+          <button type="button" className="btn btn-primary mt-5">
+            <Link to="/bookings/new" className="link-light">Reserve</Link>
+          </button>
 
         </table>
       </div>

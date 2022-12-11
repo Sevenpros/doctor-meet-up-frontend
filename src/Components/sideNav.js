@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchBookings } from '../Redux/bookings/bookings';
+import { fetchDoctor } from '../Redux/doctors/doctor';
+
 
 import AddDoctor from './Add_doctors';
 import DeleteDoctor from './Delete_doctors';
@@ -11,12 +13,13 @@ import '../Styles/nav.css';
 
 const SideNav = () => {
   const dispatch = useDispatch();
-  const bookings = useSelector((state) => state.bookingsReducer);
 
   useEffect(() => {
     dispatch(fetchBookings());
   }, [dispatch]);
-
+  const onclickHandle = () => {
+    dispatch(fetchDoctor());
+  }
   return (
     <nav className="navigation">
       <div className="logo">
@@ -34,7 +37,7 @@ const SideNav = () => {
             Doctors
           </NavLink>
         </li>
-        <li className="side-nav-div">
+        <li className="side-nav-div" onClick={onclickHandle} > 
           <NavLink to="/bookings/new" className="side-nav-link">
             Reserve a Doctor
           </NavLink>

@@ -18,8 +18,7 @@ const usersReducer = (state = initialState, action) => {
       return { ...state, current_user: action.payload };
 
     case CURRENT_USER: {
-      const user = state.users.find((user) => (user.name === action.name));
-      return { ...state, current_user: user }; }
+      return { ...state, current_user: action.user }; }
 
     default: return state;
   }
@@ -42,5 +41,5 @@ export const addUser = createAsyncThunk(ADD_USER, async (name) => {
   return response.json();
 });
 
-export const loadCurrentUser = (name) => ({ type: CURRENT_USER, name });
+export const loadCurrentUser = (user) => ({ type: CURRENT_USER, user });
 export default usersReducer;
