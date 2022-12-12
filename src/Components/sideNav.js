@@ -5,7 +5,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchBookings } from '../Redux/bookings/bookings';
 import { fetchDoctor } from '../Redux/doctors/doctor';
 
-
 import AddDoctor from './Add_doctors';
 import DeleteDoctor from './DeleteDoctor';
 import Footer from './Footer';
