@@ -16,6 +16,7 @@ function Router() {
       <Route element={<WithoutNav />}>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/bookings/new" element={<ADDBookings />} />
       </Route>
       <Route element={<WithNav />}>
         <Route path="/doctors" element={<Doctors />} />

@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { ToastContainer, toast} from 'react-toastify';
 import { addDoctor } from '../Redux/doctors/doctor';
+import '../Styles/addDoctor.css';
 
 const AddDoctor = () => {
     const dispatch = useDispatch();
@@ -55,93 +56,60 @@ const AddDoctor = () => {
     };
     
     return (
-        <div className="container-fluid d-flex justify-content-center align-items-center w-100 ml-4">
-        <div className="container d-grid justify-content-center align-items-center">
-            <table className="table borderless d-flex grid-template-column-1fr 1fr w-70">
-           
-            <tbody>
-                <tr className="card d-grid w-100 mr-0">
-                <th scope="row borderless">
-                    <input
-                    type="text"
-                    value={first_name}
+        <div className="container add-doctor">
+            <form className="form">
+                <div className="form-item">
+                    <label htmlFor="first_name" className='form-label'>First Name</label>
+                    <input type="text" className='form-control'value={first_name}
                     onChange={(e) => setFirstName(e.target.value)}
-                    className="form-control borderless"
-                    placeholder='Enter first name'
                     />
-                </th>
-                <td>
-                    <input
-                    type="text"
-                    value={last_name}
+                </div>
+                <div className="form-item">
+                    <label htmlFor="last_name" className='form-label'>Last Name</label>
+                    <input type="text" className='form-control'value={last_name}
                     onChange={(e) => setLastName(e.target.value)}
-                    className="form-control border-none"
-                    placeholder='Enter last name'
                     />
-                </td>
-                <td>
-                    <input
-                    type="text"
-                    value={city}
+                </div>
+                <div className="form-item">
+                    <label htmlFor="city" className='form-label'>City</label>
+                    <input type="text" className='form-control'value={city}
                     onChange={(e) => setCity(e.target.value)}
-                    className="form-control border-none"
-                    placeholder='Enter city name'
                     />
-                </td>
-                <td>
-                    <input
-                    type="text"
-                    value={phone}
+                </div>
+                <div className="form-item">
+                    <label htmlFor="phone" className='form-label'>Contact Number</label>
+                    <input type="text" className='form-control'value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="form-control border-none "
-                    placeholder='Enter 1...10 digit number'
                     />
-                </td>
-                <td>
-                    <input
-                    type="text"
-                    value={email}
+                </div>
+                <div className="form-item">
+                    <label htmlFor="email" className='form-label'>Email</label>
+                    <input type="text" className='form-control'value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="form-control border-none"
-                    placeholder='Enter email'
                     />
-                </td>
-                <td>
-                    <input
-                    type="text"
-                    value={bio}
+                </div>
+                <div className="form-item">
+                    <label htmlFor="bio" className='form-label'>Bio</label>
+                    <input type="text" className='form-control'value={bio}
                     onChange={(e) => setBio(e.target.value)}
-                    className="form-control border-none"
-                    placeholder='Enter bio'
                     />
-                </td>
-                <td>
-                    <input
-                    type="text"
-                    value={specialization}
+                </div>
+                <div className="form-item">
+                    <label htmlFor="specialization" className='form-label'>Specialization</label>
+                    <input type="text" className='form-control'value={specialization}
                     onChange={(e) => setSpecialization(e.target.value)}
-                    className="form-control border-none"
-                    placeholder='Enter specialization'
                     />
-                </td>
-                <td>
-                    <input
-                    type="text"
-                    value={photo}
+                </div>
+                <div className="form-item">
+                    <label htmlFor="photo" className='form-label'>Photo</label>
+                    <input type="text" className='form-control'value={photo}
                     onChange={(e) => setPhoto(e.target.value)}
-                    className="form-control border-none"
-                    placeholder='Enter photo url'
                     />
-                </td>
-                </tr>
-            </tbody>
-            </table>
-            <button type="button" className="btn btn-primary w-100"  onClick={onClickHandle}
-            >
-            Add Doctor
-            </button>
-        </div>
-        
+                </div>
+                <button type="button" className="book-btn" onClick={onClickHandle}>
+                    Add Doctor
+                </button>
+            </form>
         <ToastContainer />
         </div>
     );
