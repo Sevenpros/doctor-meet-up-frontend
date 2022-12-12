@@ -5,9 +5,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchBookings } from '../Redux/bookings/bookings';
 import { fetchDoctor } from '../Redux/doctors/doctor';
 
-
 import AddDoctor from './Add_doctors';
-import DeleteDoctor from './Delete_doctors';
+import DeleteDoctor from './DeleteDoctor';
 import Footer from './Footer';
 import '../Styles/nav.css';
 
@@ -37,7 +36,7 @@ const SideNav = () => {
             Doctors
           </NavLink>
         </li>
-        <li className="side-nav-div" onClick={onclickHandle} > 
+        <li className="side-nav-div" onClick={onclickHandle} >
           <NavLink to="/bookings/new" className="side-nav-link">
             Reserve a Doctor
           </NavLink>
@@ -48,7 +47,7 @@ const SideNav = () => {
           </NavLink>
         </li>
         <li className="side-nav-div">
-          <NavLink to="/Delete_doctors" className="side-nav-link">
+          <NavLink to="/DeleteDoctor" className="side-nav-link">
             Delete Doctors
           </NavLink>
         </li>
