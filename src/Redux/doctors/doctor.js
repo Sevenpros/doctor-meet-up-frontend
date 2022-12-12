@@ -1,4 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
 
 const FETCH_DOCTOR = 'doctor-meet-up-frontend/doctors/FETCH_DOCTOR';
 const ADD_DOCTOR = 'doctor-meet-up-frontend/doctors/ADD_DOCTOR';
@@ -30,6 +31,15 @@ export const addDoctor = createAsyncThunk(ADD_DOCTOR, async (doctor) => {
       'Content-Type': 'application/json',
     },
   });
+  if (response.status === 201) {
+    toast.success('Doctor succesfully Saved !', {
+      position: toast.POSITION.TOP_CENTER,
+    });
+  } else {
+    toast.error('Doctor not Saved !', {
+      position: toast.POSITION.TOP_CENTER,
+    });
+  }
   return response.json();
 });
 export default doctorReducer;

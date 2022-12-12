@@ -3,8 +3,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-
+import { ToastContainer, toast} from 'react-toastify';
 import { addDoctor } from '../Redux/doctors/doctor';
 import '../Styles/addDoctor.css';
 
@@ -22,16 +21,20 @@ const AddDoctor = () => {
     
     const onClickHandle = (e) => {
         e.preventDefault();
-        toast.success("You have succesfully booked this Doctor", {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
+
+        const validate = (doctor) => {
+            return (
+                doctor.first_name === '' ||
+                doctor.last_name === '' ||
+                doctor.city === '' ||
+                doctor.phone === '' ||
+                doctor.email === '' ||
+                doctor.bio === '' ||
+                doctor.specialization === '' ||
+                doctor.photo === ''
+            );
+        };
+
         const doctor = {};
         doctor.first_name = first_name;
         doctor.last_name = last_name;
@@ -41,6 +44,14 @@ const AddDoctor = () => {
         doctor.bio = bio;
         doctor.specialization = specialization;
         doctor.photo = photo;
+
+           if (validate(doctor)) {
+            toast.error('All fields must be filled !', {
+                position: toast.POSITION.TOP_CENTER,
+            });
+            return;
+        }
+    
         dispatch(addDoctor(doctor));
     };
     
