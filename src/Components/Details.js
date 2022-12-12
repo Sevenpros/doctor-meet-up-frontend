@@ -2,7 +2,9 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
+import { BsCaretLeft } from 'react-icons/bs';
 import { fetchDoctor } from '../Redux/doctors/doctor';
+import '../Styles/details.css';
 
 const Details = () => {
   const doctor = useSelector((state) => state.doctor);
@@ -13,41 +15,45 @@ const Details = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div className="container d-flex justify-content-center align-items-center">
-      <div>
-        <img src={doctor.photo} alt="Doctor-Img" className="doctor-img" />
-        <Link to="/doctors">Back</Link>
+    <div className="container-det d-flex">
+      <div className="doctor-div">
+        <img src={doctor.photo} alt="Doctor-Img" className="doc-img" />
+        <button type="button" className="back-btn">
+          <Link to="/doctors" className="link-light"><BsCaretLeft /></Link>
+        </button>
       </div>
-      <div className="container d-flex justify-content-center align-items-center">
+      <div className="doctor-det">
+        <h2>
+          {doctor.first_name}
+          {' '}
+          {doctor.last_name}
+        </h2>
+        <p>
+          Specialization:
+          {' '}
+          {doctor.specialization}
+        </p>
         <table className="table">
-          <thead>
-            <tr>
-              <th scope="col">First Name</th>
-              <th scope="col">Last Name </th>
-              <th scope="col">City</th>
-              <th scope="col">Contact Number</th>
-              <th scope="col">E-mail</th>
-              <th scope="col">Bio</th>
-              <th scope="col">Specialization</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">{doctor.first_name}</th>
-              <td>{doctor.last_name}</td>
-              <td>{doctor.city}</td>
-              <td>{doctor.phone}</td>
-              <td>{doctor.email}</td>
-              <td>{doctor.bio}</td>
-              <td>{doctor.specialization}</td>
-
-            </tr>
-          </tbody>
-          <button type="button" className="btn btn-primary mt-5">
-            <Link to="/bookings/new" className="link-light">Reserve</Link>
-          </button>
-
+          <tr>
+            <td>City</td>
+            <td>{doctor.city}</td>
+          </tr>
+          <tr>
+            <td>Contact Number</td>
+            <td>{doctor.phone}</td>
+          </tr>
+          <tr>
+            <td>E-mail</td>
+            <td>{doctor.email}</td>
+          </tr>
+          <tr>
+            <td>Bio</td>
+            <td>{doctor.bio}</td>
+          </tr>
         </table>
+        <button type="button" className="reserve-btn">
+          <Link to="/bookings/new" className="link-light">Reserve</Link>
+        </button>
       </div>
     </div>
   );

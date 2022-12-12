@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 
 import { addDoctor } from '../Redux/doctors/doctor';
+import '../Styles/addDoctor.css';
 
 const AddDoctor = () => {
     const dispatch = useDispatch();
@@ -44,88 +45,60 @@ const AddDoctor = () => {
     };
     
     return (
-        <div className="container d-flex justify-content-center align-items-center">
-        <div className="container d-grid justify-content-center align-items-center">
-            <table className="table d-flex grid-template-column-1fr 1fr">
-            <thead>
-                <tr className="card d-grid">
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name </th>
-                <th scope="col">City</th>
-                <th scope="col">Contact Number</th>
-                <th scope="col">E-mail</th>
-                <th scope="col">Bio</th>
-                <th scope="col">Specialization</th>
-                <th scope="col">Photo</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr className="card d-grid">
-                <th scope="row">
-                    <input
-                    type="text"
-                    value={first_name}
+        <div className="container add-doctor">
+            <form className="form">
+                <div className="form-item">
+                    <label htmlFor="first_name" className='form-label'>First Name</label>
+                    <input type="text" className='form-control'value={first_name}
                     onChange={(e) => setFirstName(e.target.value)}
                     />
-                </th>
-                <td>
-                    <input
-                    type="text"
-                    value={last_name}
+                </div>
+                <div className="form-item">
+                    <label htmlFor="last_name" className='form-label'>Last Name</label>
+                    <input type="text" className='form-control'value={last_name}
                     onChange={(e) => setLastName(e.target.value)}
                     />
-                </td>
-                <td>
-                    <input
-                    type="text"
-                    value={city}
+                </div>
+                <div className="form-item">
+                    <label htmlFor="city" className='form-label'>City</label>
+                    <input type="text" className='form-control'value={city}
                     onChange={(e) => setCity(e.target.value)}
                     />
-                </td>
-                <td>
-                    <input
-                    type="text"
-                    value={phone}
+                </div>
+                <div className="form-item">
+                    <label htmlFor="phone" className='form-label'>Contact Number</label>
+                    <input type="text" className='form-control'value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     />
-                </td>
-                <td>
-                    <input
-                    type="text"
-                    value={email}
+                </div>
+                <div className="form-item">
+                    <label htmlFor="email" className='form-label'>Email</label>
+                    <input type="text" className='form-control'value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     />
-                </td>
-                <td>
-                    <input
-                    type="text"
-                    value={bio}
+                </div>
+                <div className="form-item">
+                    <label htmlFor="bio" className='form-label'>Bio</label>
+                    <input type="text" className='form-control'value={bio}
                     onChange={(e) => setBio(e.target.value)}
                     />
-                </td>
-                <td>
-                    <input
-                    type="text"
-                    value={specialization}
+                </div>
+                <div className="form-item">
+                    <label htmlFor="specialization" className='form-label'>Specialization</label>
+                    <input type="text" className='form-control'value={specialization}
                     onChange={(e) => setSpecialization(e.target.value)}
                     />
-                </td>
-                <td>
-                    <input
-                    type="text"
-                    value={photo}
+                </div>
+                <div className="form-item">
+                    <label htmlFor="photo" className='form-label'>Photo</label>
+                    <input type="text" className='form-control'value={photo}
                     onChange={(e) => setPhoto(e.target.value)}
                     />
-                </td>
-                </tr>
-            </tbody>
-            </table>
-            <button type="button" className="btn btn-primary" onClick={onClickHandle}
-            >
-            Add Doctor
-            </button>
-        </div>
-        
+                </div>
+                <button type="button" className="book-btn" onClick={onClickHandle}>
+                    Add Doctor
+                </button>
+            </form>
         <ToastContainer />
         </div>
     );

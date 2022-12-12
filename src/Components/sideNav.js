@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchBookings } from '../Redux/bookings/bookings';
 import { fetchDoctor } from '../Redux/doctors/doctor';
 
-
+import Navbar from './NavBar';
 import AddDoctor from './Add_doctors';
 import DeleteDoctor from './Delete_doctors';
 import Footer from './Footer';
@@ -21,6 +21,7 @@ const SideNav = () => {
     dispatch(fetchDoctor());
   }
   return (
+    <>
     <nav className="navigation">
       <div className="logo">
         <h2>DOCTORS BOOKINGS</h2>
@@ -57,6 +58,7 @@ const SideNav = () => {
         {DeleteDoctor}
       </ul>
     </nav>
+    </>
   );
 };
 export default SideNav;

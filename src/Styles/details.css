@@ -1,0 +1,53 @@
+.container-det {
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  padding: 36px 0;
+  height: 100vh;
+}
+
+.doctor-div {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.doctor-det {
+  padding: 0 20px 0 0;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.doc-img {
+  margin: 15px;
+  height: 70vh;
+}
+
+.back-btn {
+  width: 100px;
+  height: 65px;
+  border: none;
+  border-radius: 0 30px 30px 0;
+  color: white;
+  background-color: #98bf11;
+}
+
+tr:nth-child(even) {
+  background-color: #e2e3e5;
+}
+
+td {
+  padding: 15px;
+}
+
+.reserve-btn {
+  width: 200px;
+  height: 65px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  background-color: #98bf11;
+}

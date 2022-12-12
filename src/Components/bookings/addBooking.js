@@ -6,6 +6,8 @@ import { Navigate } from 'react-router-dom';
 import Select from 'react-select'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { BsPersonCircle } from 'react-icons/bs';
+import '../../Styles/addBooking.css';
 
 const ADDBookings = () => {
   const currentUser = useSelector((state) => state.users.current_user);
@@ -81,20 +83,107 @@ else{
   if(currentDoctor.first_name || currentDoctor.last_name){
     // setDoctor(currentDoctor.id)
     return (
-      <div className='booking-form'>
-        <h1>ADD BOOKING</h1>
-        <form>
-          <label htmlFor="visitor" className='form-label'>Visitor</label>
-          <input type="text" className='form-control' value={user.name}/>
+      <div className="booking-form"
+        style={{
+          backgroundImage: `url(${currentDoctor.photo})`,
+          // backgroundImage: `url(${externalImage})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          height: '94vh',
+        }}
+        >
+        <div className="top">
+          <BsPersonCircle />
+          <p>{user.name}</p>
+        </div>
+        <h1>Reserve A DOCTOR</h1>
+        <form className="form">
+          <div className="form-item">
+            <label htmlFor="date" className='form-label'>Date</label>
+            <input
+              type="date"
+              className='form-control'
+              id="date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+            />
+          </div>
+          <div className="form-item">
+            <label htmlFor="time" className='form-label'>Time</label>
+            <input
+              type="time"
+              className='form-control'
+              id="time"
+              value={time}
+              onChange={(e) => setTime(e.target.value)}
+            />
+          </div>
+          <div className="form-item">
+            <label htmlFor="desc" className='form-label'>Disease Description</label>
+            <textarea
+              type="text"
+              className='form-control'
+              id="desc"
+              value={desc}
+              onChange={(e) => setDesc(e.target.value)}
+            />
+          </div>
+          <div className="form-item">
+            <label htmlFor="city" className='form-label'>Doctor</label>
+            <input type="text" className='form-control' 
+            onChange={(e) => setDoctor(currentDoctor.id)}
+            value={`${currentDoctor.first_name} ${currentDoctor.last_name}`}/>
+          </div>
+          {/* <Select options ={options}  onChange={(e) => setDoctor(e.value)}/> */}
+          <div className="form-item">
+          <label htmlFor="city" className='form-label'>City</label>
+            <input
+              type="text"
+              className='form-control'
+              id="city"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+            />
+          </div>
+          <button
+            type="submit"
+            className='book-btn'
+            onClick={ onClickHandle }
+          >
+            Add Booking
+          </button>
+        </form>
+        <div className="overlay" />
+        <ToastContainer />
+      </div>
+  
+    );
+  }
+  else {
+  return (
+    <div className='booking-form'
+    style={{
+      backgroundColor: '#96bf02'
+    }}
+    >
+      <div className="top">
+        <BsPersonCircle />
+        <p>{user.name}</p>
+      </div>
+      <h1>ADD BOOKING</h1>
+      <form className="form">
+        <div className="form-item">
           <label htmlFor="date" className='form-label'>Date</label>
           <input
-  
             type="date"
             className='form-control'
             id="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
           />
+        </div>
+        <div className="form-item">
           <label htmlFor="time" className='form-label'>Time</label>
           <input
             type="time"
@@ -103,6 +192,8 @@ else{
             value={time}
             onChange={(e) => setTime(e.target.value)}
           />
+        </div>
+        <div className="form-item">
           <label htmlFor="desc" className='form-label'>Disease Description</label>
           <textarea
             type="text"
@@ -111,11 +202,12 @@ else{
             value={desc}
             onChange={(e) => setDesc(e.target.value)}
           />
+        </div>
+        <div className="form-item">
           <label htmlFor="city" className='form-label'>Doctor</label>
-          <input type="text" className='form-control' 
-          onChange={(e) => setDoctor(currentDoctor.id)}
-          value={`${currentDoctor.first_name} ${currentDoctor.last_name}`}/>
-          {/* <Select options ={options}  onChange={(e) => setDoctor(e.value)}/> */}
+          <Select options ={options}  onChange={(e) => setDoctor(e.value)} className="form-control"/>
+        </div>
+        <div className="form-item">
           <label htmlFor="city" className='form-label'>City</label>
           <input
             type="text"
@@ -124,69 +216,16 @@ else{
             value={city}
             onChange={(e) => setCity(e.target.value)}
           />
-          <button
-            type="submit"
-            className='btn btn-primary mt-3'
-            onClick={ onClickHandle }
-          >
-            Add Booking
-          </button>
-        </form>
-        <ToastContainer />
-      </div>
-  
-    );
-  }
-  else {
-  return (
-    <div className='booking-form'>
-      <h1>ADD BOOKING</h1>
-      <form>
-        <label htmlFor="visitor" className='form-label'>Visitor</label>
-        <input type="text" className='form-control' value={user.name}/>
-        <label htmlFor="date" className='form-label'>Date</label>
-        <input
-
-          type="date"
-          className='form-control'
-          id="date"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-        />
-        <label htmlFor="time" className='form-label'>Time</label>
-        <input
-          type="time"
-          className='form-control'
-          id="time"
-          value={time}
-          onChange={(e) => setTime(e.target.value)}
-        />
-        <label htmlFor="desc" className='form-label'>Disease Description</label>
-        <textarea
-          type="text"
-          className='form-control'
-          id="desc"
-          value={desc}
-          onChange={(e) => setDesc(e.target.value)}
-        />
-        <label htmlFor="city" className='form-label'>Doctor</label>
-        <Select options ={options}  onChange={(e) => setDoctor(e.value)}/>
-        <label htmlFor="city" className='form-label'>City</label>
-        <input
-          type="text"
-          className='form-control'
-          id="city"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        />
+        </div>
         <button
           type="submit"
-          className='btn btn-primary mt-3'
+          className='book-btn'
           onClick={ onClickHandle }
         >
           Add Booking
         </button>
       </form>
+      <div className="overlay" />
       <ToastContainer />
     </div>
 
