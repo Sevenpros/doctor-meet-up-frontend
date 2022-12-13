@@ -1,4 +1,5 @@
 .container-det {
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 80%;
@@ -18,12 +19,13 @@
   width: 35%;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 75vh;
 }
 
 .doc-img {
-  margin: 15px;
-  height: 70vh;
+  margin: auto;
+  height: 60vh;
+  width: 80%;
 }
 
 .back-btn {
@@ -50,4 +52,49 @@ td {
   border-radius: 30px;
   color: white;
   background-color: #98bf11;
+}
+
+@media only screen and (max-width: 768px) {
+  .container-det {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .table td {
+    padding: 10px;
+    font-size: small;
+  }
+
+  .doctor-div {
+    width: 100%;
+    height: 310px;
+    flex-direction: column-reverse;
+  }
+
+  .back-btn {
+    width: 70px;
+    height: 50px;
+  }
+
+  .doc-img {
+    width: 45%;
+    margin: 15px;
+    height: 170px;
+  }
+
+  .doctor-det {
+    padding: 0 15px 0 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reserve-btn {
+    width: 170px;
+    height: 55px;
+  }
 }

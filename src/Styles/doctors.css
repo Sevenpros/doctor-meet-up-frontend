@@ -57,3 +57,13 @@
 .rec.rec-dot {
   display: none;
 }
+
+.social-i {
+  width: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .rec.rec-arrow {
+    display: none;
+  }
+}

@@ -3,7 +3,9 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ToastContainer, toast} from 'react-toastify';
+import { BsCaretLeft } from 'react-icons/bs';
 import { addDoctor } from '../Redux/doctors/doctor';
 import '../Styles/addDoctor.css';
 
@@ -56,53 +58,63 @@ const AddDoctor = () => {
     };
     
     return (
-        <div className="container add-doctor">
+        <div className="add-doctor">
+            <button type="button" className="back-btn"
+                style={{
+                border: '1px solid white',
+                width: '60px',
+                height: '40px',
+                marginBottom: '40px',
+                }}
+            >
+                <Link to="/doctors" className="link-light"><BsCaretLeft /></Link>
+            </button>
             <form className="form">
                 <div className="form-item">
                     <label htmlFor="first_name" className='form-label'>First Name</label>
-                    <input type="text" className='form-control'value={first_name}
+                    <input type="text" className='form-controls'value={first_name}
                     onChange={(e) => setFirstName(e.target.value)}
                     />
                 </div>
                 <div className="form-item">
                     <label htmlFor="last_name" className='form-label'>Last Name</label>
-                    <input type="text" className='form-control'value={last_name}
+                    <input type="text" className='form-controls'value={last_name}
                     onChange={(e) => setLastName(e.target.value)}
                     />
                 </div>
                 <div className="form-item">
                     <label htmlFor="city" className='form-label'>City</label>
-                    <input type="text" className='form-control'value={city}
+                    <input type="text" className='form-controls'value={city}
                     onChange={(e) => setCity(e.target.value)}
                     />
                 </div>
                 <div className="form-item">
                     <label htmlFor="phone" className='form-label'>Contact Number</label>
-                    <input type="text" className='form-control'value={phone}
+                    <input type="text" className='form-controls'value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     />
                 </div>
                 <div className="form-item">
                     <label htmlFor="email" className='form-label'>Email</label>
-                    <input type="text" className='form-control'value={email}
+                    <input type="text" className='form-controls'value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
                 <div className="form-item">
                     <label htmlFor="bio" className='form-label'>Bio</label>
-                    <input type="text" className='form-control'value={bio}
+                    <input type="text" className='form-controls'value={bio}
                     onChange={(e) => setBio(e.target.value)}
                     />
                 </div>
                 <div className="form-item">
                     <label htmlFor="specialization" className='form-label'>Specialization</label>
-                    <input type="text" className='form-control'value={specialization}
+                    <input type="text" className='form-controls'value={specialization}
                     onChange={(e) => setSpecialization(e.target.value)}
                     />
                 </div>
                 <div className="form-item">
                     <label htmlFor="photo" className='form-label'>Photo</label>
-                    <input type="text" className='form-control'value={photo}
+                    <input type="text" className='form-controls'value={photo}
                     onChange={(e) => setPhoto(e.target.value)}
                     />
                 </div>
