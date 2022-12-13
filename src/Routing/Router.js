@@ -23,7 +23,6 @@ function Router() {
         <Route path="/Add_doctors" element={<AddDoctor />} />
         <Route path="/bookings" element={<Bookings />} />
         <Route path="/details/:id" element={<Details />} />
-        <Route path="/bookings/new" element={<ADDBookings />} />
         <Route path="/DeleteDoctor" element={<DeleteDoctor />} />
       </Route>
     </Routes>

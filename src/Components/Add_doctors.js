@@ -3,7 +3,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { ToastContainer, toast} from 'react-toastify';
 import { BsCaretLeft } from 'react-icons/bs';
 import { addDoctor } from '../Redux/doctors/doctor';
@@ -59,16 +58,6 @@ const AddDoctor = () => {
     
     return (
         <div className="add-doctor">
-            <button type="button" className="back-btn"
-                style={{
-                border: '1px solid white',
-                width: '60px',
-                height: '40px',
-                marginBottom: '40px',
-                }}
-            >
-                <Link to="/doctors" className="link-light"><BsCaretLeft /></Link>
-            </button>
             <form className="form">
                 <div className="form-item">
                     <label htmlFor="first_name" className='form-label'>First Name</label>

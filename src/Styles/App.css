@@ -45,3 +45,13 @@ td {
 .row {
   border: none;
 }
+
+/* .humbuger {
+
+} */
+
+@media only screen and (max-width: 768px) {
+  .component-layout {
+    flex-direction: column;
+  }
+}
