@@ -151,7 +151,7 @@ else{
             className='book-btn'
             onClick={ onClickHandle }
           >
-            Add Booking
+            Save Booking
           </button>
         </form>
         <div className="overlay" />
