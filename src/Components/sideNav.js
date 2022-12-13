@@ -8,7 +8,6 @@ import { TfiGoogle } from 'react-icons/tfi'
 import { fetchBookings } from '../Redux/bookings/bookings';
 import { fetchDoctor } from '../Redux/doctors/doctor';
 
-import Navbar from './NavBar';
 import AddDoctor from './Add_doctors';
 import DeleteDoctor from './DeleteDoctor';
 import Footer from './Footer';
