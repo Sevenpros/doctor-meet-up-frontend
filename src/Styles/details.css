@@ -1,4 +1,5 @@
 .container-det {
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 80%;
@@ -50,4 +51,34 @@ td {
   border-radius: 30px;
   color: white;
   background-color: #98bf11;
+}
+
+@media only screen and (max-width: 768px) {
+  .container-det {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .doctor-div {
+    width: 100%;
+    height: 510px;
+    flex-direction: column-reverse;
+  }
+
+  .doc-img {
+    width: 50%;
+    margin: 15px;
+    height: 210px;
+  }
+
+  .doctor-det {
+    padding: 0 20px 0 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }

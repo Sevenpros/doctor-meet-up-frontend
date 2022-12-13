@@ -2,11 +2,12 @@
 
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 import Select from 'react-select'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { BsPersonCircle } from 'react-icons/bs';
+import { BsPersonCircle, BsCaretLeft } from 'react-icons/bs';
 import '../../Styles/addBooking.css';
 
 const ADDBookings = () => {
@@ -94,8 +95,13 @@ else{
         }}
         >
         <div className="top">
-          <BsPersonCircle />
-          <p>{user.name}</p>
+          <button type="button" className="back-btn">
+            <Link to="/doctors" className="link-light"><BsCaretLeft /></Link>
+          </button>
+          <div>
+            <BsPersonCircle />
+            <p>{user.name}</p>
+          </div>
         </div>
         <h1>Reserve A DOCTOR</h1>
         <form className="form">
@@ -103,7 +109,7 @@ else{
             <label htmlFor="date" className='form-label'>Date</label>
             <input
               type="date"
-              className='form-control'
+              className='form-controls'
               id="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
@@ -113,7 +119,7 @@ else{
             <label htmlFor="time" className='form-label'>Time</label>
             <input
               type="time"
-              className='form-control'
+              className='form-controls'
               id="time"
               value={time}
               onChange={(e) => setTime(e.target.value)}
@@ -123,7 +129,7 @@ else{
             <label htmlFor="desc" className='form-label'>Disease Description</label>
             <textarea
               type="text"
-              className='form-control'
+              className='form-controls'
               id="desc"
               value={desc}
               onChange={(e) => setDesc(e.target.value)}
@@ -131,7 +137,7 @@ else{
           </div>
           <div className="form-item">
             <label htmlFor="city" className='form-label'>Doctor</label>
-            <input type="text" className='form-control' 
+            <input type="text" className='form-controls' 
             onChange={(e) => setDoctor(currentDoctor.id)}
             value={`${currentDoctor.first_name} ${currentDoctor.last_name}`}/>
           </div>
@@ -140,7 +146,7 @@ else{
           <label htmlFor="city" className='form-label'>City</label>
             <input
               type="text"
-              className='form-control'
+              className='form-controls'
               id="city"
               value={city}
               onChange={(e) => setCity(e.target.value)}
@@ -168,8 +174,19 @@ else{
     }}
     >
       <div className="top">
-        <BsPersonCircle />
-        <p>{user.name}</p>
+        <button type="button" className="back-btn"
+        style={{
+          border: '1px solid white',
+          width: '60px',
+          height: '40px',
+        }}
+        >
+          <Link to="/doctors" className="link-light"><BsCaretLeft /></Link>
+        </button>
+        <div>
+          <BsPersonCircle />
+          <p>{user.name}</p>
+        </div>
       </div>
       <h1>ADD BOOKING</h1>
       <form className="form">
@@ -177,7 +194,7 @@ else{
           <label htmlFor="date" className='form-label'>Date</label>
           <input
             type="date"
-            className='form-control'
+            className='form-controls'
             id="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
@@ -187,7 +204,7 @@ else{
           <label htmlFor="time" className='form-label'>Time</label>
           <input
             type="time"
-            className='form-control'
+            className='form-controls'
             id="time"
             value={time}
             onChange={(e) => setTime(e.target.value)}
@@ -197,7 +214,7 @@ else{
           <label htmlFor="desc" className='form-label'>Disease Description</label>
           <textarea
             type="text"
-            className='form-control'
+            className='form-controls'
             id="desc"
             value={desc}
             onChange={(e) => setDesc(e.target.value)}
@@ -205,13 +222,13 @@ else{
         </div>
         <div className="form-item">
           <label htmlFor="city" className='form-label'>Doctor</label>
-          <Select options ={options}  onChange={(e) => setDoctor(e.value)} className="form-control"/>
+          <Select options ={options}  onChange={(e) => setDoctor(e.value)} className="form-controls"/>
         </div>
         <div className="form-item">
           <label htmlFor="city" className='form-label'>City</label>
           <input
             type="text"
-            className='form-control'
+            className='form-controls'
             id="city"
             value={city}
             onChange={(e) => setCity(e.target.value)}

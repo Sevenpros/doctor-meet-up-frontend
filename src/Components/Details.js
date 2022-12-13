@@ -15,7 +15,7 @@ const Details = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div className="container-det d-flex">
+    <div className="container-det">
       <div className="doctor-div">
         <img src={doctor.photo} alt="Doctor-Img" className="doc-img" />
         <button type="button" className="back-btn">
