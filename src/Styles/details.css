@@ -64,10 +64,20 @@ td {
     padding: 20px;
   }
 
+  .table td {
+    padding: 10px;
+    font-size: small;
+  }
+
   .doctor-div {
     width: 100%;
     height: 310px;
     flex-direction: column-reverse;
+  }
+
+  .back-btn {
+    width: 70px;
+    height: 50px;
   }
 
   .doc-img {
@@ -77,9 +87,14 @@ td {
   }
 
   .doctor-det {
-    padding: 0 20px 0 0;
+    padding: 0 15px 0 0;
     width: 100%;
     display: flex;
     flex-direction: column;
+  }
+
+  .reserve-btn {
+    width: 170px;
+    height: 55px;
   }
 }

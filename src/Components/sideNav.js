@@ -2,6 +2,9 @@
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { RiFacebookFill, RiTwitterFill, RiVimeoFill } from 'react-icons/ri';
+import { FaPinterestP } from 'react-icons/fa'
+import { TfiGoogle } from 'react-icons/tfi'
 import { fetchBookings } from '../Redux/bookings/bookings';
 import { fetchDoctor } from '../Redux/doctors/doctor';
 
@@ -57,6 +60,14 @@ const SideNav = () => {
         {AddDoctor}
         {DeleteDoctor}
       </ul>
+      <div className="socials">
+        <RiFacebookFill className="socials-i" />
+        <RiTwitterFill className="socials-i" />
+        <TfiGoogle className="socials-i" />
+        <RiVimeoFill className="socials-i" />
+        <FaPinterestP className="socials-i" />
+        <p>2022,@anasbassi,@Sevenpros,@Ambrosegithub,@eaesmat</p>
+      </div>
     </nav>
     </>
   );
