@@ -9,28 +9,23 @@ import WithNav from '../Components/WithNav';
 import ADDBookings from '../Components/bookings/addBooking';
 import AddDoctor from '../Components/Add_doctors';
 import DeleteDoctor from '../Components/DeleteDoctor';
-import Humburger from '../Components/Humburger';
 
 function Router() {
   return (
-    <div>
-      <Humburger />
-      <Routes>
-        <Route element={<WithoutNav />}>
-          <Route path="/" element={<Login />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/bookings/new" element={<ADDBookings />} />
-        </Route>
-        <Route element={<WithNav />}>
-          <Route path="/doctors" element={<Doctors />} />
-          <Route path="/Add_doctors" element={<AddDoctor />} />
-          <Route path="/bookings" element={<Bookings />} />
-          <Route path="/details/:id" element={<Details />} />
-          <Route path="/bookings/new" element={<ADDBookings />} />
-          <Route path="/DeleteDoctor" element={<DeleteDoctor />} />
-        </Route>
-      </Routes>
-    </div>
+    <Routes>
+      <Route element={<WithoutNav />}>
+        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/bookings/new" element={<ADDBookings />} />
+      </Route>
+      <Route element={<WithNav />}>
+        <Route path="/doctors" element={<Doctors />} />
+        <Route path="/Add_doctors" element={<AddDoctor />} />
+        <Route path="/bookings" element={<Bookings />} />
+        <Route path="/details/:id" element={<Details />} />
+        <Route path="/DeleteDoctor" element={<DeleteDoctor />} />
+      </Route>
+    </Routes>
   );
 }
 
