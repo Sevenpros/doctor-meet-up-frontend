@@ -3,8 +3,7 @@
 
 <div align="center">
 
-  <img src="https://img.shields.io/badge/Microverse-blueviolet
-" alt="logo" width="140"  height="auto" />
+  <img src="https://img.shields.io/badge/Microverse-blueviolet" alt="logo" width="140" height="auto" />
   <br/>
 
   <h3><b>Microverse README Template</b></h3>
