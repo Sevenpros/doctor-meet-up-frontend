@@ -3,8 +3,7 @@ import renderer from 'react-test-renderer';
 import { BrowserRouter as Router } from 'react-router-dom';
 import store from '../redux/store';
 
-/* eslint-disable-next-line ... */
-import ADDBookings from '../Components/bookings/addBooking';
+import ADDBookings from '../Components/bookings/addBooking';  // eslint-disable-line
 
 describe('ADDBookings tests', () => {
   it('render ADDBookings test', () => {

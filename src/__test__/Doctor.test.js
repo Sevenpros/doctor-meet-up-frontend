@@ -3,8 +3,7 @@ import renderer from 'react-test-renderer';
 import { BrowserRouter as Router } from 'react-router-dom';
 import store from '../redux/store';
 
-/* eslint-disable-next-line ... */
-import Doctors from '../Components/Doctors';
+import Doctors from '../Components/Doctors';  // eslint-disable-line
 
 describe('Bookings tests', () => {
   it('render Countries test', () => {

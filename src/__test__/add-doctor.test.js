@@ -3,8 +3,7 @@ import renderer from 'react-test-renderer';
 import { BrowserRouter as Router } from 'react-router-dom';
 import store from '../redux/store';
 
-/* eslint-disable-next-line ... */
-import AddDoctor from '../Components/Add_doctors';
+import AddDoctor from '../Components/Add_doctors';  // eslint-disable-line
 
 describe('Add_doctor tests', () => {
   it('render Add_doctor test', () => {

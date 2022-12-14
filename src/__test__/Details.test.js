@@ -3,8 +3,7 @@ import renderer from 'react-test-renderer';
 import { BrowserRouter as Router } from 'react-router-dom';
 import store from '../redux/store';
 
-/* eslint-disable-next-line ... */
-import Details from '../Components/Details';
+import Details from '../Components/Details';  // eslint-disable-line
 
 describe('Details tests', () => {
   it('render Details test', () => {
