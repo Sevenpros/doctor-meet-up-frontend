@@ -65,7 +65,7 @@ const SideNav = () => {
         <TfiGoogle className="socials-i" />
         <RiVimeoFill className="socials-i" />
         <FaPinterestP className="socials-i" />
-        <p>2022,@anasbassi,@Sevenpros,@Ambrosegithub,@eaesmat</p>
+        <p>C2022,@anas,@seth,@Ambrose,@esmat</p>
       </div>
     </nav>
     </>

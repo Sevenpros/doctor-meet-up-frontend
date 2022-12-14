@@ -24,6 +24,7 @@ body {
 
 .component-layout {
   display: flex;
+  position: relative;
 }
 
 input {
@@ -53,5 +54,10 @@ td {
 @media only screen and (max-width: 768px) {
   .component-layout {
     flex-direction: column;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0;
   }
 }
