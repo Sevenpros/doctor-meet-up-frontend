@@ -5,6 +5,7 @@
   width: 80%;
   padding: 36px 0;
   height: 100vh;
+  margin-left: 22%;
 }
 
 .doctor-div {
@@ -62,6 +63,7 @@ td {
     justify-content: center;
     width: 100%;
     padding: 20px;
+    margin: 0;
   }
 
   .table td {

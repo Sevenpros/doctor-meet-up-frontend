@@ -1,7 +1,8 @@
 .booking-container {
-  width: 100%;
+  width: 80%;
   text-align: center;
   padding-top: 50px;
+  margin-left: 22%;
 }
 
 .booking {
@@ -16,6 +17,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .booking-container {
+    width: 100%;
+  }
+
   .table td {
     padding: 10px;
     font-size: small;
