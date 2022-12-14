@@ -1,16 +1,15 @@
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import store from '../redux/store';
-import Doctors from '../Components/Doctors';
+import AddDoctor from '../Components/Add_doctors';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-
-describe('Bookings tests', () => {
-  it('render Countries test', () => {
+describe('Add_doctor tests', () => {
+  it('render Add_doctor test', () => {
     const tree = renderer.create(
       <Provider store={store}>
         <Router>
-        <Doctors />
+        <AddDoctor />
         </Router>
        </Provider>,
 

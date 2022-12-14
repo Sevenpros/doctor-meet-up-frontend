@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bookings tests render Countries test 1`] = `
+<div
+  className="main-container container"
+>
+  <div
+    className="header"
+  >
+    <h1>
+      Available Doctors
+    </h1>
+    <p>
+      Please select a Doctor
+    </p>
+  </div>
+  <div
+    className="sc-jSUZER dQEjUh rec rec-carousel-wrapper doctors"
+    style={Object {}}
+  >
+    <div
+      className="sc-eDvSVe lguFiu rec rec-carousel"
+      size={
+        Object {
+          "height": 0,
+        }
+      }
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <button
+        className="sc-bcXHqe Slxdj rec rec-arrow rec rec-arrow-left"
+        disabled={true}
+        onClick={[Function]}
+        style={Object {}}
+        tabIndex={0}
+        type="button"
+      >
+        ❮
+      </button>
+      <div
+        className="sc-dkrFOg biYdFZ rec rec-slider-container"
+      >
+        <div
+          className="sc-hLBbgP ikrMvi rec rec-slider"
+          style={
+            Object {
+              "left": "0px",
+              "right": "auto",
+              "top": "auto",
+              "transition": "all 500ms ease",
+            }
+          }
+        >
+          <div
+            className="rec rec-swipable"
+            onMouseDown={[Function]}
+            style={
+              Object {
+                "display": "flex",
+                "flexDirection": "row",
+              }
+            }
+          />
+        </div>
+      </div>
+      <button
+        className="sc-bcXHqe Slxdj rec rec-arrow rec rec-arrow-right"
+        disabled={true}
+        onClick={[Function]}
+        style={Object {}}
+        tabIndex={0}
+        type="button"
+      >
+        ❯
+      </button>
+    </div>
+    <div
+      className="sc-iBYQkv jtKTCe rec rec-pagination"
+    >
+      <button
+        className="sc-gKPRtg cVXxbE rec rec-dot rec rec-dot_active"
+        onClick={[Function]}
+        tabIndex={-1}
+        type="button"
+      />
+    </div>
+  </div>
+</div>
+`;
