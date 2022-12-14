@@ -104,6 +104,7 @@ const AddDoctor = () => {
                 <div className="form-item">
                     <label htmlFor="photo" className='form-label'>Photo</label>
                     <input type="text" className='form-controls'value={photo}
+                    placeholder ="Enter your image url"
                     onChange={(e) => setPhoto(e.target.value)}
                     />
                 </div>
