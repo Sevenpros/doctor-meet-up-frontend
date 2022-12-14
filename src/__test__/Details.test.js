@@ -4,14 +4,14 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 /* eslint-disable-next-line */
 import store from '../redux/store';
-import Doctors from '../Components/Doctors';
+import Details from '../Components/Details';
 
-describe('Bookings tests', () => {
-  it('render Countries test', () => {
+describe('Details tests', () => {
+  it('render Details test', () => {
     const tree = renderer.create(
       <Provider store={store}>
         <Router>
-          <Doctors />
+          <Details />
         </Router>
       </Provider>,
 

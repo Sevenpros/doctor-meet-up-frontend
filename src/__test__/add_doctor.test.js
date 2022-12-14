@@ -4,17 +4,16 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 /* eslint-disable-next-line */
 import store from '../redux/store';
-import Doctors from '../Components/Doctors';
+import AddDoctor from '../Components/Add_doctors';
 
-describe('Bookings tests', () => {
-  it('render Countries test', () => {
+describe('Add_doctor tests', () => {
+  it('render Add_doctor test', () => {
     const tree = renderer.create(
       <Provider store={store}>
         <Router>
-          <Doctors />
+          <AddDoctor />
         </Router>
       </Provider>,
-
     );
     expect(tree).toMatchSnapshot();
   });
