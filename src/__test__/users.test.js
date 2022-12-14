@@ -1,5 +1,4 @@
-
-import { loadCurrentUser } from '../Redux/users/users';  // eslint-disable-line
+import { loadCurrentUser } from '../Redux/users/users';
 
 describe('Bookings tests', () => {
   it('should return an action with type LOAD_CUREENT USER', () => {
