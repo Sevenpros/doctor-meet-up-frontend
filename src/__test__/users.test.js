@@ -1,3 +1,4 @@
+/* eslint-disable-next-line ... */
 import { loadCurrentUser } from '../Redux/users/users';
 
 describe('Bookings tests', () => {
