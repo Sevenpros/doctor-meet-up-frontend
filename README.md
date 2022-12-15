@@ -38,6 +38,17 @@
 # DOCTOR-MEET-UP-FRONTEND
 
 DOCTOR-MEET-UP-FRONTEND- App is a React API web application(consist of mobile and desktop versions) that allows users to book an appointment with their Doctors, users are allow to add or remove doctor from the list with good design
+# [BACKEND APP](https://github.com/Sevenpros/doctor-meet-up-backend)
+
+## KANBAN BOARD
+ - Click  [ Here](https://github.com/users/Sevenpros/projects/3/views/1) to view the Kanban board.
+<img width="955" alt="image" src="https://user-images.githubusercontent.com/26649756/205082177-41e2fd0c-1b43-42c3-b041-dfb91d23cbb9.png">
+
+- This group consists of 4 people:
+  - @Sevenpros 
+  - @anasbassi 
+  - @Ambrosegithub 
+  - @eaesmat 
 
 ## Built With
 
