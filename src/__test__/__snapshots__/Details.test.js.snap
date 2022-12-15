@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Details tests render Details test 1`] = `
+<div
+  className="container-det"
+>
+  <div
+    className="doctor-div"
+  >
+    <img
+      alt="Doctor-Img"
+      className="doc-img"
+    />
+    <button
+      className="back-btn"
+      type="button"
+    >
+      <a
+        className="link-light"
+        href="/doctors"
+        onClick={[Function]}
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"
+          />
+        </svg>
+      </a>
+    </button>
+  </div>
+  <div
+    className="doctor-det"
+  >
+    <h2>
+       
+    </h2>
+    <p>
+      Specialization:
+       
+    </p>
+    <table
+      className="table"
+    >
+      <tr>
+        <td>
+          City
+        </td>
+        <td />
+      </tr>
+      <tr>
+        <td>
+          Contact Number
+        </td>
+        <td />
+      </tr>
+      <tr>
+        <td>
+          E-mail
+        </td>
+        <td />
+      </tr>
+      <tr>
+        <td>
+          Bio
+        </td>
+        <td />
+      </tr>
+    </table>
+    <button
+      className="reserve-btn"
+      type="button"
+    >
+      <a
+        className="link-light"
+        href="/bookings/new"
+        onClick={[Function]}
+      >
+        Reserve
+      </a>
+    </button>
+  </div>
+</div>
+`;

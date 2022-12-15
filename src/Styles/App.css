@@ -1,0 +1,63 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+  padding: 40px 0;
+  padding: 36px 0;
+  height: 100vh;
+}
+
+.login-form {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.component-layout {
+  display: flex;
+  position: relative;
+}
+
+input {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+tr,
+td {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+.row {
+  border: none;
+}
+
+/* .humbuger {
+
+} */
+
+@media only screen and (max-width: 768px) {
+  .component-layout {
+    flex-direction: column;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+}
