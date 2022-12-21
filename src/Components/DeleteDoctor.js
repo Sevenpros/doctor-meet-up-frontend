@@ -21,7 +21,7 @@ const Doctors = () => {
   }, [dispatch]);
 
   const deleteDoctor = (id) => {
-    fetch(`http://localhost:3001/doctors/${id}`, {
+    fetch(`https://doctor-meetup.onrender.com/${id}`, {
       method: 'DELETE',
     });
     dispatch(fetchDoctors());

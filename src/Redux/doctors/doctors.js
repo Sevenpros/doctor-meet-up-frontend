@@ -13,7 +13,7 @@ const doctorsReducer = (state = initialState, action) => {
 };
 
 export const fetchDoctors = createAsyncThunk(FETCH_DOCTORS, async () => {
-  const data = await fetch('http://localhost:3001/doctors');
+  const data = await fetch('https://doctor-meetup.onrender.com/doctors');
   const response = await data.json();
   return response;
 });
