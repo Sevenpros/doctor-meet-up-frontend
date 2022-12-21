@@ -18,13 +18,13 @@ const doctorReducer = (state = initialState, action) => {
 };
 
 export const fetchDoctor = createAsyncThunk(FETCH_DOCTOR, async (id) => {
-  const data = await fetch(`http://localhost:3001/doctors/${id}`);
+  const data = await fetch(`https://doctor-meetup.onrender.com/doctors/${id}`);
   const response = await data.json();
   return response;
 });
 
 export const addDoctor = createAsyncThunk(ADD_DOCTOR, async (doctor) => {
-  const response = await fetch('http://localhost:3001/doctors', {
+  const response = await fetch('https://doctor-meetup.onrender.com/doctors', {
     method: 'POST',
     body: JSON.stringify(doctor),
     headers: {

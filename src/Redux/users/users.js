@@ -25,13 +25,13 @@ const usersReducer = (state = initialState, action) => {
 };
 
 export const fetchUsers = createAsyncThunk(FETCH_USERS, async () => {
-  const data = await fetch('http://localhost:3001/users');
+  const data = await fetch('https://doctor-meetup.onrender.com/users');
   const response = await data.json();
   return response;
 });
 
 export const addUser = createAsyncThunk(ADD_USER, async (name) => {
-  const response = await fetch('http://localhost:3001/users', {
+  const response = await fetch('https://doctor-meetup.onrender.com/users', {
     method: 'POST',
     body: JSON.stringify({ name }),
     headers: {

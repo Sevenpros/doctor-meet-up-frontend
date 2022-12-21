@@ -55,7 +55,7 @@ else{
     });
     return;
     }
-    const response = await fetch(`http://localhost:3001/users/${user.id}/bookings`, {
+    const response = await fetch(`https://doctor-meetup.onrender.com/users/${user.id}/bookings`, {
       method: 'POST',
       body: JSON.stringify(booking),
       headers: {

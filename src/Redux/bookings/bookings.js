@@ -4,13 +4,13 @@ const FETCH_BOOKINGS = 'FETCH_BOOKINGS';
 const CANCEL_BOOKING = 'CANCEL_BOOKING';
 
 export const fetchBookings = createAsyncThunk(FETCH_BOOKINGS, async (id) => {
-  const Response = await fetch(`http://localhost:3001/users/${id}/bookings`);
+  const Response = await fetch(`https://doctor-meetup.onrender.com/users/${id}/bookings`);
   const result = await Response.json();
   return result;
 });
 
 export const cancelBooking = createAsyncThunk(CANCEL_BOOKING, async (id) => {
-  const Response = await fetch(`http://localhost:3001/users/${id}/bookings/${id}`, {
+  const Response = await fetch(`https://doctor-meetup.onrender.com/users/${id}/bookings/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
